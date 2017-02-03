@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Rumpel78/fcc-Request-Header-Parser-Microservice#readme",
   "dependencies": {
-    "express": "^4.14.1"
+    "express": "^4.14.1",
+    "express-useragent": "^1.0.6"
   }
 }
