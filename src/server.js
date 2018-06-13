@@ -6,7 +6,11 @@ var port = process.env.PORT || 8080;
 
 app.use(useragent.express());
 
-app.get('/', function (req, res) {
+var mainRouter = express.Router();
+var basePath = process.env.BASEPATH || '';
+app.use(basePath, mainRouter);
+
+mainRouter.get('/', function (req, res) {
     var language = req.get('Accept-Language').split(';')[0].split(',')[0]
     var ipaddress = req.ip
     var software = req.useragent.platform + " - " + req.useragent.os
